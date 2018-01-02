@@ -8,9 +8,9 @@
 		<artifactId>easyfream</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>easyfream-web-admin</artifactId>
+	<artifactId>easyfream-web-desk</artifactId>
 	<packaging>war</packaging>
-	<name>easyfream-web-admin Maven Webapp</name>
+	<name>easyfream-web-desk Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
@@ -36,6 +36,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>easyfream-web-admin</finalName>
+		<finalName>easyfream-web-desk</finalName>
 	</build>
 </project>

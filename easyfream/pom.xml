@@ -171,5 +171,6 @@
 		<module>easyfream-dao</module>
 		<module>easyfream-service</module>
 		<module>easyfream-web-admin</module>
+		<module>easyfream-web-desk</module>
 	</modules>
 </project>
