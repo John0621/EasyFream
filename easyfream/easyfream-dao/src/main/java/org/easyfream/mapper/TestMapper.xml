@@ -10,7 +10,7 @@
 	</resultMap>
 	<select id="getListTest" resultMap="testMap">
 		select user_id,login_name,password
-		from zhima.users
+		from users
 		limit 10
 	</select>
 
