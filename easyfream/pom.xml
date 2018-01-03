@@ -26,6 +26,7 @@
 		<commons-lang3.version>3.1</commons-lang3.version>
 		<logback.version>0.9.29</logback.version>
 		<aspectj.version>1.7.0</aspectj.version>
+		<mysql.version>5.1.36</mysql.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -100,10 +101,11 @@
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<!-- Mysql驱动程序 -->
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>9.3-1102-jdbc4</version>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>commons-net</groupId>
