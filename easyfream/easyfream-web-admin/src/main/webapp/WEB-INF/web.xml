@@ -21,9 +21,19 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>spring</servlet-name>
-		<url-pattern>*.do</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<!-- 不拦截静态文件 -->
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/js/*</url-pattern>
+		<url-pattern>/css/*</url-pattern>
+		<url-pattern>/images/*</url-pattern>
+		<url-pattern>/fonts/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- 配置字符集过滤器 -->
 	<filter>
 		<filter-name>characterEncodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -32,6 +42,7 @@
 			<param-value>UTF-8</param-value>
 		</init-param>
 	</filter>
+	<!-- 配置项目的编码mapping -->
 	<filter-mapping>
 		<filter-name>characterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
@@ -42,7 +53,13 @@
 	<listener>
 		<listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
 	</listener>
+	<!-- 设置欢迎页面 -->
+	<welcome-file-list>
+		<welcome-file>/index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>
-		<session-timeout>360</session-timeout>
+		<session-timeout>120</session-timeout>
 	</session-config>
 </web-app>
